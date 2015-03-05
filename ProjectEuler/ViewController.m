@@ -23,7 +23,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self smallestDivider];
+    [self largestPalindrome];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,6 +85,51 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
         }
     }
     NSLog(@"result %i", result);
+}
+
+#pragma mark - Problem #4
+/* A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+ Find the largest palindrome made from the product of two 3-digit numbers.*/
+- (void)largestPalindrome {//906609
+    
+    int largest = 0;
+    int smallest = 999999;
+    
+    NSArray * numbers   =   [NSArray arrayWithNumbersInRange:NSMakeRange(100, 899)];
+    
+    for (int i = (int)numbers.count - 1; i >= 0; i --) {//Issue? will it multiply with itself?
+        for (int j = (int)numbers.count - 1; j >= 0; j--) {
+            int a = [numbers[i] intValue];
+            int b = [numbers[j] intValue];
+            int mul = a * b;
+            
+            //Ref: http://stackoverflow.com/questions/17946649/check-if-string-is-palindrome-in-objective-c
+            NSString *p = [NSString stringWithFormat:@"%i", mul];
+            NSInteger length = p.length;
+            
+            NSInteger halfLength = length / 2;
+            
+            __block BOOL isPalindrome = YES;
+            
+            [p enumerateSubstringsInRange:NSMakeRange(0, halfLength) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+                NSRange otherRange = [p rangeOfComposedCharacterSequenceAtIndex:length - enclosingRange.location - 1];
+                
+                if (![substring isEqualToString:[p substringWithRange:otherRange]]) {
+                    isPalindrome = NO;
+                    *stop = YES;
+                }
+            }];
+            if (isPalindrome) {
+                if ([p intValue] > largest) {
+                    largest = [p intValue];
+                }
+                if ([p intValue] < smallest) {
+                    smallest = [p intValue];
+                }
+            }
+        }
+    }
+    NSLog(@"largest = %i & smallest = %i", largest, smallest);
 }
 
 #pragma mark - Problem #5

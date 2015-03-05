@@ -14,6 +14,7 @@
 		6F3856C31AA71ACE0080D8C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F3856C21AA71ACE0080D8C4 /* Images.xcassets */; };
 		6F3856C61AA71ACE0080D8C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F3856C41AA71ACE0080D8C4 /* LaunchScreen.xib */; };
 		6F3856D21AA71ACE0080D8C4 /* ProjectEulerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3856D11AA71ACE0080D8C4 /* ProjectEulerTests.m */; };
+		6F3856DE1AA71BE90080D8C4 /* NSArray+RangeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3856DD1AA71BE90080D8C4 /* NSArray+RangeArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		6F3856CB1AA71ACE0080D8C4 /* ProjectEulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectEulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3856D01AA71ACE0080D8C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F3856D11AA71ACE0080D8C4 /* ProjectEulerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectEulerTests.m; sourceTree = "<group>"; };
+		6F3856DC1AA71BE90080D8C4 /* NSArray+RangeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RangeArray.h"; sourceTree = "<group>"; };
+		6F3856DD1AA71BE90080D8C4 /* NSArray+RangeArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RangeArray.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		6F3856B41AA71ACD0080D8C4 /* ProjectEuler */ = {
 			isa = PBXGroup;
 			children = (
+				6F3856DB1AA71BCE0080D8C4 /* Categories */,
 				6F3856B91AA71ACE0080D8C4 /* AppDelegate.h */,
 				6F3856BA1AA71ACE0080D8C4 /* AppDelegate.m */,
 				6F3856BC1AA71ACE0080D8C4 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				6F3856D01AA71ACE0080D8C4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6F3856DB1AA71BCE0080D8C4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6F3856DC1AA71BE90080D8C4 /* NSArray+RangeArray.h */,
+				6F3856DD1AA71BE90080D8C4 /* NSArray+RangeArray.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			files = (
 				6F3856BE1AA71ACE0080D8C4 /* ViewController.m in Sources */,
 				6F3856BB1AA71ACE0080D8C4 /* AppDelegate.m in Sources */,
+				6F3856DE1AA71BE90080D8C4 /* NSArray+RangeArray.m in Sources */,
 				6F3856B81AA71ACE0080D8C4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

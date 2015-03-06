@@ -23,7 +23,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self largestPalindrome];
+    [self primeNumberAtPosition];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -172,6 +172,34 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
     
     double difference  =   sumSquare - [squaredSum doubleValue];
     NSLog(@"difference %.0f", difference);
+}
+
+#pragma mark - Problem #7
+/* By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+ What is the 10001st prime number?
+*/
+- (void)primeNumberAtPosition {//104743
+    
+    NSInteger maxLimit              =   10001;
+    NSMutableArray *primeNumbers    =   [NSMutableArray arrayWithCapacity:maxLimit];
+    int i = 2; //smallest palindrome
+    BOOL isPrime;
+    int divi = 2;
+    
+    do {
+        isPrime = YES;
+        for (divi = 2; divi < i; divi++) {
+            if (i % divi == 0) {
+                isPrime = NO;
+                continue;
+            }
+        }
+        if (isPrime)
+            [primeNumbers addObject:[NSNumber numberWithInt:i]];
+        i++;
+
+    } while ([primeNumbers count] < maxLimit);
+    NSLog(@"%lu-st prime number %i", (unsigned long)primeNumbers.count, [[primeNumbers lastObject] intValue]);
 }
 
 @end

@@ -15,6 +15,7 @@
 		6F3856C61AA71ACE0080D8C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F3856C41AA71ACE0080D8C4 /* LaunchScreen.xib */; };
 		6F3856D21AA71ACE0080D8C4 /* ProjectEulerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3856D11AA71ACE0080D8C4 /* ProjectEulerTests.m */; };
 		6F3856DE1AA71BE90080D8C4 /* NSArray+RangeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3856DD1AA71BE90080D8C4 /* NSArray+RangeArray.m */; };
+		6F7877111ABCBACB0017E666 /* NSString+Split.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7877101ABCBACB0017E666 /* NSString+Split.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		6F3856D11AA71ACE0080D8C4 /* ProjectEulerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectEulerTests.m; sourceTree = "<group>"; };
 		6F3856DC1AA71BE90080D8C4 /* NSArray+RangeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RangeArray.h"; sourceTree = "<group>"; };
 		6F3856DD1AA71BE90080D8C4 /* NSArray+RangeArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RangeArray.m"; sourceTree = "<group>"; };
+		6F78770F1ABCBACB0017E666 /* NSString+Split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Split.h"; sourceTree = "<group>"; };
+		6F7877101ABCBACB0017E666 /* NSString+Split.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Split.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 			children = (
 				6F3856DC1AA71BE90080D8C4 /* NSArray+RangeArray.h */,
 				6F3856DD1AA71BE90080D8C4 /* NSArray+RangeArray.m */,
+				6F78770F1ABCBACB0017E666 /* NSString+Split.h */,
+				6F7877101ABCBACB0017E666 /* NSString+Split.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			files = (
 				6F3856BE1AA71ACE0080D8C4 /* ViewController.m in Sources */,
 				6F3856BB1AA71ACE0080D8C4 /* AppDelegate.m in Sources */,
+				6F7877111ABCBACB0017E666 /* NSString+Split.m in Sources */,
 				6F3856DE1AA71BE90080D8C4 /* NSArray+RangeArray.m in Sources */,
 				6F3856B81AA71ACE0080D8C4 /* main.m in Sources */,
 			);
@@ -426,6 +432,7 @@
 				6F3856D71AA71ACE0080D8C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F3856D81AA71ACE0080D8C4 /* Build configuration list for PBXNativeTarget "ProjectEulerTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +441,7 @@
 				6F3856DA1AA71ACE0080D8C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
